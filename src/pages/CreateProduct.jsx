@@ -11,6 +11,7 @@ function CreateProduct() {
     product_description: "",
   });
 
+  // handle change event for the Create Product.
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCreateProduct((prevData) => ({
@@ -19,9 +20,11 @@ function CreateProduct() {
     }));
   };
 
+  // onSubmit form handler for CreateProduct form.
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
+    // Checking whether any of the inputs are empty.
     if (
       createProduct.product_id === "" ||
       createProduct.product_name === "" ||
@@ -30,6 +33,7 @@ function CreateProduct() {
     ) {
       alert("Input Fields cannot be empty");
     } else {
+      // axios post data API call to create a product
       await axios
         .post(
           `https://65d582e43f1ab8c6343722c3.mockapi.io/api/products/`,
@@ -44,7 +48,6 @@ function CreateProduct() {
   return (
     <div className="container bg-light mt-5 p-5 w-50">
       <h1 className="text-center mb-4">Create Product</h1>
-
       <form onSubmit={handleFormSubmit}>
         <div className="mb-3">
           <label htmlFor="product_name" className="form-label">
@@ -102,6 +105,7 @@ function CreateProduct() {
         <div className="d-grid mt-5">
           <button type="submit" className="btn btn-success">
             Create Product
+            <i className="fa-solid fa-plus ms-2"></i>
           </button>
         </div>
       </form>

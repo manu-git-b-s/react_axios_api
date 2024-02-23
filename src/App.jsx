@@ -10,6 +10,7 @@ import Products from "./pages/Products";
 function App() {
   const [id, setId] = useState(0);
   return (
+    // Routing enabled for various routes by react-router-dom
     <BrowserRouter>
       <Navbar />
       <Routes>

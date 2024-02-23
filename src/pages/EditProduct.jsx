@@ -22,6 +22,7 @@ function EditProduct({ id }) {
       .catch((err) => console.log(err));
   };
 
+  // handle change event for the Edit Product
   const handleChange = (e) => {
     const { name, value } = e.target;
     setEditData((prevData) => ({
@@ -30,9 +31,11 @@ function EditProduct({ id }) {
     }));
   };
 
+  // onSubmit form handler for EditProduct form
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
+    // Checking whether any of the inputs are empty.
     if (
       editData.product_id === "" ||
       editData.product_name === "" ||
@@ -41,6 +44,7 @@ function EditProduct({ id }) {
     ) {
       alert("Input fields cannot be empty");
     } else {
+      // axios post data API call to update the product info
       await axios
         .put(
           `https://65d582e43f1ab8c6343722c3.mockapi.io/api/products/${id}`,
@@ -111,7 +115,7 @@ function EditProduct({ id }) {
 
         <div className="d-grid mt-5">
           <button type="submit" className="btn btn-dark">
-            Update Product
+            Update Product <i className="fa-solid fa-pen ms-2"></i>
           </button>
         </div>
       </form>

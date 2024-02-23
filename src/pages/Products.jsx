@@ -12,6 +12,7 @@ function Products({ setId }) {
     fetchData();
   }, [deletedData]);
 
+  // onClick handler for deleting a product.
   const handleDelete = async (id) => {
     await axios
       .delete(`https://65d582e43f1ab8c6343722c3.mockapi.io/api/products/${id}`)
@@ -19,6 +20,7 @@ function Products({ setId }) {
       .catch((err) => console.log(err));
   };
 
+  // fetching products from API
   const fetchData = async () => {
     await axios
       .get("https://65d582e43f1ab8c6343722c3.mockapi.io/api/products")
@@ -26,12 +28,14 @@ function Products({ setId }) {
       .catch((err) => console.log(err));
   };
 
+  // onClick handler for editing a product.
   const handleEdit = (id) => {
     setId(id);
     navigate(`/edit/${id}`);
   };
 
   return (
+    // table
     <div className="container">
       <h1 className="text-center my-3">Products</h1>
       <table className="table table-striped">

@@ -5,6 +5,7 @@ function Card({
   product_description,
 }) {
   return (
+    // card for products displaying
     <div className="card mb-5 me-3 p-0" style={{ width: "18rem" }}>
       <img src={product_image} className="card-img-top" alt={product_name} />
       <div className="card-body p-3">

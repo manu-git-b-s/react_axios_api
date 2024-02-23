@@ -21,6 +21,7 @@ function Home() {
       <div className="container">
         <h1 className="my-3 text-center">Products</h1>
         <div className="row row-cols-md-6 row-cols-lg-4 row-cols-sm-12 d-flex justify-content-center">
+          {/* Mapping all the products data retrieved from api */}
           {products.map((item, index) => {
             return <Card key={index} {...item} />;
           })}
