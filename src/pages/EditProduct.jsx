@@ -45,7 +45,7 @@ function EditProduct({ id }) {
   return (
     <div className="container mt-5 bg-light p-5 w-50">
       <form onSubmit={handleFormSubmit}>
-        <h1 className="text-center">Edit Product</h1>
+        <h1 className="text-center mb-4">Edit Product</h1>
         <div className="mb-3">
           <label htmlFor="product_name" className="form-label">
             Product Name

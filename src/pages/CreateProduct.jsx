@@ -34,7 +34,7 @@ function CreateProduct() {
 
   return (
     <div className="container bg-light mt-5 p-5 w-50">
-      <h1 className="text-center">Create Product</h1>
+      <h1 className="text-center mb-4">Create Product</h1>
 
       <form onSubmit={handleFormSubmit}>
         <div className="mb-3">
