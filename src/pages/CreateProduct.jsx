@@ -22,14 +22,23 @@ function CreateProduct() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    await axios
-      .post(
-        `https://65d582e43f1ab8c6343722c3.mockapi.io/api/products/`,
-        createProduct
-      )
-      .then(() => {})
-      .catch((err) => console.log(err));
-    navigate("/products");
+    if (
+      createProduct.product_id === "" ||
+      createProduct.product_name === "" ||
+      createProduct.product_price === "" ||
+      createProduct.product_description === ""
+    ) {
+      alert("Input Fields cannot be empty");
+    } else {
+      await axios
+        .post(
+          `https://65d582e43f1ab8c6343722c3.mockapi.io/api/products/`,
+          createProduct
+        )
+        .then(() => {})
+        .catch((err) => console.log(err));
+      navigate("/products");
+    }
   };
 
   return (

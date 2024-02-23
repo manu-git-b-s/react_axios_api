@@ -32,14 +32,24 @@ function EditProduct({ id }) {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    await axios
-      .put(
-        `https://65d582e43f1ab8c6343722c3.mockapi.io/api/products/${id}`,
-        editData
-      )
-      .then((res) => setEditData(res.data))
-      .catch((err) => console.log(err));
-    navigate("/products");
+
+    if (
+      editData.product_id === "" ||
+      editData.product_name === "" ||
+      editData.product_price === "" ||
+      editData.product_description === ""
+    ) {
+      alert("Input fields cannot be empty");
+    } else {
+      await axios
+        .put(
+          `https://65d582e43f1ab8c6343722c3.mockapi.io/api/products/${id}`,
+          editData
+        )
+        .then((res) => setEditData(res.data))
+        .catch((err) => console.log(err));
+      navigate("/products");
+    }
   };
 
   return (
