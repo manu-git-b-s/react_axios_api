@@ -37,8 +37,8 @@ function Products({ setId }) {
   return (
     // table
     <div className="container">
-      <h1 className="text-center my-3">Products</h1>
-      <table className="table table-striped">
+      <h1 className="text-center my-3">Products List</h1>
+      <table className="table table-light table-striped table-bordered">
         <thead>
           <tr>
             <th scope="col">S.No</th>

@@ -1,16 +1,27 @@
 # React Axios API Project
 
-Welcome to my Shopping Cart project with Context API! This application provides an intuitive and seamless shopping experience for both users and developers.This project is developed with React and Bootstrap.To view the cart First click on Add to cart button on products you want and an cart icon would pop on navbar,by clicking on cart icon you will be able to view the shoppingcart.
+Welcome to my Products CRUD 🛒 project with Axios.This application provides an intuitive and seamless shopping experience for both users and developers.This project is developed with React and Bootstrap.To add products go to the `CreateProduct` page in navbar and to edit a product click on the edit button of a product in `products` page.
+
+### Responsive Web Design:
+
+- The app is designed to be responsive, ensuring a consistent and optimized user interface across various devices and screen sizes.
+
+### Bootstrap Integration:
+
+- Incorporates Bootstrap for styling and layout components, contributing to a modern and visually appealing UI.
 
 ## Table of Contents
 
 - [React Axios API Project](#react-axios-api-project)
+  - [Responsive Web Design:](#responsive-web-design)
+  - [Bootstrap Integration:](#bootstrap-integration)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-    - [Configuration](#configuration)
+  - [Programming Languages Used](#programming-languages-used)
+  - [Technologies Used](#technologies-used)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
   - [Usage](#usage)
   - [Contributing](#contributing)
   - [Feedback](#feedback)
@@ -18,20 +29,40 @@ Welcome to my Shopping Cart project with Context API! This application provides 
 
 ## Features
 
-- 📦 Browse and add products to your cart.
-- 🛒 View products in cart.
-- 🌐 Responsive design for a seamless experience across devices.
+- Product details displayed by using Axios Fetch API.
+- It is based on `CURD` Operation.
+  - C - POST (create)
+  - U - GET
+  - R - PUT (update)
+  - D - DELETE
+- Creating Fake API by using **Mock API Website**
 
-## Getting Started
+- Home page for displaying the **Product Details**
+- Click `create` to add the products details to the home page.
+- Click `edit` to modify the content.
+- Click `delete` to remove the product from the home page.
 
-### Prerequisites
+## Programming Languages Used
+
+<div align="left" display="inline">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="12" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  /><img width="12" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="javascript logo"  /><img width="12" /><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="bootstrap logo"  /><img width="12" /> <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo"  />
+</div>
+
+## Technologies Used
+
+<div align="left">
+  <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" height="40" alt="vscode logo"  /><img width="12" /> <img src="https://cdn.simpleicons.org/git/F05032" height="40" alt="git logo"  /><img width="12" /><img src="https://cdn.simpleicons.org/github/007ACC" height="40" alt="git logo"  /><img width="12" /><img src="https://cdn.simpleicons.org/netlify/00C7B7" height="40" alt="netlify logo"  />
+</div>
+
+## Prerequisites
 
 Before you begin, ensure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
 
-### Installation
+## Installation
 
 1. **Clone the repository:**
 
@@ -63,7 +94,7 @@ Before you begin, ensure you have the following installed on your machine:
    http://localhost:3000
    ```
 
-### Configuration
+## Configuration
 
 1. Open the `config.js` file and configure any necessary settings .
 
@@ -89,7 +120,7 @@ If you have any questions, issues, or suggestions, feel free to [open an issue](
 
 ## Netlify Link
 
-[React-Context-API](https://react-axios-manu.netlify.app/)
+[React-Axios-API](https://react-axios-manu.netlify.app/)
 
 ```bash
 https://react-axios-manu.netlify.app/

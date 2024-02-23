@@ -15,6 +15,7 @@ function EditProduct({ id }) {
     fetchData();
   }, [id]);
 
+  // Fetching the edit product data from API call.
   const fetchData = async () => {
     await axios
       .get(`https://65d582e43f1ab8c6343722c3.mockapi.io/api/products/${id}`)

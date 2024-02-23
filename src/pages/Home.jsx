@@ -9,6 +9,7 @@ function Home() {
 
   const [products, setProducts] = useState([]);
 
+  // fetching data from API to display products
   const fetchData = async () => {
     await axios
       .get("https://65d582e43f1ab8c6343722c3.mockapi.io/api/products")
@@ -18,8 +19,7 @@ function Home() {
 
   return (
     <div className="home">
-      <div className="container">
-        <h1 className="my-3 text-center">Products</h1>
+      <div className="container mt-5">
         <div className="row row-cols-md-6 row-cols-lg-4 row-cols-sm-12 d-flex justify-content-center">
           {/* Mapping all the products data retrieved from api */}
           {products.map((item, index) => {
